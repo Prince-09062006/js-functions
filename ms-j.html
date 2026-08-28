@@ -1,0 +1,82 @@
+<html>
+<head>
+<title>TIK TIK MOVIES</title>
+</head>
+<body bgcolor>
+<link rel="stylesheet" href="3-in-one.css">
+<script>
+
+function total()
+{
+
+let a =parseInt(document.getElementById('a1').value);
+let b =parseInt(document.getElementById('a2').value);
+let c =parseInt(document.getElementById('a3').value);
+
+document.getElementById('a4').value=a1+a2+a3;
+
+let x = 120;
+let y = 200;
+let z = 150;
+
+
+
+let d = parseInt(document.getElementById('a1').value x * a1);
+let e = parseInt(document.getElementById('a2').value y * a2); 
+let f = parseInt(document.getElementById('a3').value z * a3);
+
+
+document.getElementById('a5').value=d+e+f;
+
+
+}
+
+</script>
+
+<div class="container">
+
+<form>
+
+<h1 class= title>"TIK TIK MOVIES"</h1>
+
+<lable for="mname"><h3>Select Movie:-</h3></lable>
+
+<select name="mname" id="mname">
+
+<option value="mv1">HTTYD THE HIDEN WORLD</option>
+<option value="mv2">FIGHT CLUBE</option>
+<option value="mv3">GEPSSY</option>
+<option value="mv4">PRINCE OF PERSIA THE SANDS OF TIME </option>
+
+</select>
+
+<h3>Ticket count based on age:-</h3>
+
+<h3>Age below 13(1-12):-</h3>
+<input type="number" id="a1">
+
+
+<h3>Age between 13-59:-</h3>
+<input type="number" id="a2">
+
+
+<h3>Age above 60:-</h3>
+<input type="number" id="a3">
+
+<br><br>
+<button type button>"BOOK NOW" onclick="total()"</button>
+
+<h2>5% DISCOUNT ON 5+ TICKETT BOOKING<h2>
+
+<h3>Total ticket's:-</h3>
+<input type="number" id="a4">
+
+
+<h3>Total cost:-</h3>
+<input type="number" id="a5">
+
+
+</form>
+</div>
+</body>
+</html>

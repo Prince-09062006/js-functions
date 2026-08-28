@@ -1,0 +1,44 @@
+
+body 
+	{
+	 background-image: url("Screenshot 2026-08-28 103556.jpg");
+	}
+
+.container{
+    width: 90%;
+    margin: 35px auto;
+    background-color:rgba(255, 255, 255, 0.5);
+    padding: 25px;
+    border-radius: 00px 00px 00px 00px;
+
+
+}
+
+
+
+/*
+.v-line{
+border-left: 2px solid #000000;
+height: 100px;
+display: inline_block;
+margin 015px
+    text-align:center;
+}
+
+img{
+    width: 250px;
+    height: 250px;
+    display: block;
+    margin: auto;
+    border-radius: 50%;
+    border: 4px solid white;
+}
+
+background-color:Tomato
+ border-style: dotted;
+ birder-width: thick;
+  background-color: #5A5A5A;
+#00B050
+
+*/
+
