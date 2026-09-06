@@ -1,82 +1,89 @@
 <html>
 <head>
 <title>TIK TIK MOVIES</title>
-</head>
-<body bgcolor>
 <link rel="stylesheet" href="3-in-one.css">
-<script>
-
-function total()
-{
-
-let a =parseInt(document.getElementById('a1').value);
-let b =parseInt(document.getElementById('a2').value);
-let c =parseInt(document.getElementById('a3').value);
-
-document.getElementById('a4').value=a1+a2+a3;
-
-let x = 120;
-let y = 200;
-let z = 150;
-
-
-
-let d = parseInt(document.getElementById('a1').value x * a1);
-let e = parseInt(document.getElementById('a2').value y * a2); 
-let f = parseInt(document.getElementById('a3').value z * a3);
-
-
-document.getElementById('a5').value=d+e+f;
-
-
-}
-
-</script>
+</head>
+<body>
 
 <div class="container">
 
 <form>
 
-<h1 class= title>"TIK TIK MOVIES"</h1>
+<h1 class="title">TIK TIK MOVIES</h1>
 
-<lable for="mname"><h3>Select Movie:-</h3></lable>
-
+<label for="mname"><h3>Select Movie:</h3></label>
 <select name="mname" id="mname">
 
-<option value="mv1">HTTYD THE HIDEN WORLD</option>
-<option value="mv2">FIGHT CLUBE</option>
-<option value="mv3">GEPSSY</option>
-<option value="mv4">PRINCE OF PERSIA THE SANDS OF TIME </option>
+<option value="mv1">HTTYD THE HIDDEN WORLD</option>
+<option value="mv2">FIGHT CLUB</option>
+<option value="mv3">GYPSY</option>
+<option value="mv4">PRINCE OF PERSIA THE SANDS OF TIME</option>
 
 </select>
 
-<h3>Ticket count based on age:-</h3>
-
-<h3>Age below 13(1-12):-</h3>
-<input type="number" id="a1">
-
-
-<h3>Age between 13-59:-</h3>
-<input type="number" id="a2">
+<h3>Ticket count based on age:</h3>
+<h3>Age below 13 (1-12):</h3>
+<input type="number" id="a1" min="0" value="0">
 
 
-<h3>Age above 60:-</h3>
-<input type="number" id="a3">
+<h3>Age between 13-59:</h3>
+<input type="number" id="a2" min="0" value="0">
+
+
+<h3>Age above 60:</h3>
+<input type="number" id="a3" min="0" value="0">
 
 <br><br>
-<button type button>"BOOK NOW" onclick="total()"</button>
 
-<h2>5% DISCOUNT ON 5+ TICKETT BOOKING<h2>
+<button type="button" onclick="total()">BOOK NOW</button>
 
-<h3>Total ticket's:-</h3>
-<input type="number" id="a4">
+<h2>5% DISCOUNT ON 5+ TICKET BOOKING</h2>
+<h3>Total Tickets:</h3>
+<input type="number" id="a4" readonly>
 
+<h3>Total Cost:</h3>
+<input type="number" id="a5" readonly>
 
-<h3>Total cost:-</h3>
-<input type="number" id="a5">
+<br><br>
+
+<button type="button" onclick="location.href='shope-js.html'">T.T Shop</button>
+<button type="button" onclick="location.href='travel-js.html'">T.T Travel</button>
 
 
 </form>
+
 </div>
+
+<script>
+
+function total()
+{
+
+let a = parseInt(document.getElementById("a1").value);
+let b = parseInt(document.getElementById("a2").value);
+let c = parseInt(document.getElementById("a3").value);
+
+let x = 120;  // Below 13
+let y = 200;  // Age 13-59
+let z = 150;  // Above 60
+
+let totalTickets = a + b + c;
+
+document.getElementById("a4").value = totalTickets;
+
+let d = a * x;
+let e = b * y;
+let f = c * z;
+
+let totalCost = d + e + f;
+if (totalTickets >= 5)
+{
+totalCost = totalCost - (totalCost * 5 / 100);
+}
+
+document.getElementById("a5").value = totalCost;
+}
+
+</script>
 </body>
 </html>
