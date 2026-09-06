@@ -1,48 +1,74 @@
 <html>
 <head>
 <title>TIK TIK SHOPE</title>
+<link rel="stylesheet" href="3-in-one.css">
 </head>
 <body>
-<link rel="stylesheet" href="3-in-one.css">
-<script>
-function sh_rs()
-{
-if (rs>=1000)
-{
- <h2>No discount</h2>
-}
-else if (rs>3000)
-{
-
-rs == (r/100) * 10
-
-}
-else if (rs >5000)
-{
-
-rs == (rs/100) * 20
-
-}
-
-else
-{
-
-rs == (rs/100) * 30
-
-}
-return -rs;
-}
-
-</script>
 
 <div class="container">
 
-<h1 class= title>"TIK TIK SHOPE"</h1>
+<h1 class="title">TIK TIK SHOPE</h1>
+<h2>Enter the Total Cost:</h2>
+<input type="number" id="rs" min="0">
 
-<h2>Enter the Total cost:-</h2>
-<input type="number" id=rs>
-<input type="submit" value="Submit">
-<button>reset</button>
+<br><br>
 
-</div></body>
+<h2>Note: Below Rs.1000 There is no discount</h2>
+<h2>The Final Cost:</h2>
+<input type="number" id="f-rs" readonly>
+
+<br><br>
+
+<button type="button" onclick="sh_rs()">Submit</button>
+<button type="button" onclick="resetPage()">Reset</button>
+
+<br><br>
+
+<h2 id="result"></h2>
+
+<button type="button"onclick="location.href='ms-j.html'">T.T Movies</button>
+<button type="button"onclick="location.href='travel-js.html'">T.T Travels</button>
+
+</div>
+
+<script>
+
+function sh_rs()
+{
+let rs = Number(document.getElementById("rs").value);
+let discount;
+
+if (rs <= 1000)
+{
+discount = 0;
+}
+else if (rs <= 3000)
+{
+discount = 10;
+}
+else if (rs <= 5000)
+{
+discount = 20;
+}
+else
+{
+discount = 30;
+}
+
+let discountAmount = (rs / 100) * discount;
+let finalAmount = rs - discountAmount;
+document.getElementById("f-rs").value = finalAmount;
+}
+
+
+function resetPage()
+
+{
+document.getElementById("rs").value = "";
+document.getElementById("f-rs").value = "";
+document.getElementById("result").innerHTML = "";
+}
+
+</script>
+</body>
 </html>
